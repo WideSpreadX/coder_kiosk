@@ -25,14 +25,30 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     background: #222;
-    color: orange;
+    color: rgb(109, 161, 221);
+    text-shadow: 0 0 2px rgba(200, 225, 240, 0.719);
     font-family: 'Orbitron', sans-serif;
     font-size: 1.5rem;
     width: 100%;
 }
+.text-page h2 {
+    font-size: 60px;
+    color: rgba(175, 221, 223, 0.733);
+    text-shadow: 0 0 3px rgb(185, 220, 223);
+    text-align: center;
+    padding: 20px;
+}
+.text-page h3 {
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 0 0 3px #fff;
+    padding: 20px;
+}
+.text-page p {
+    
+}
 .top {
-    background: rgb(207, 94, 1);
-    color: black;
+    color: rgb(109, 178, 224);
     width: 100%;
 }
 .logo {
@@ -84,7 +100,7 @@ background: blue;
     width: 100%;
     transform: translate(-95%);
     position: fixed;
-    height: 100%;
+    height: 100vh;
     line-height: 38pt;
     box-shadow: 0 5px 20px -3px rgba(253, 253, 253, 0.479);
     background: rgba(0, 0, 0, 0.733);
@@ -117,12 +133,12 @@ background: blue;
     list-style: none;
     position: fixed;
     right: 0;
-    height: 100%;
+    height: 100vh;
 }
 .nav ul li {
     transform: translateX(-50%);
     line-height: 42px;
-    transition: all .2s ease-out;
+    transition: all .3s ease-out;
     margin-left: 35px;
 }
 .nav ul li:hover {
@@ -152,10 +168,10 @@ background: blue;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(253, 253, 253, 0.479), inset 0 0 5px rgba(253, 253, 253, 0.479);
-    background: #000;
+    background-image: linear-gradient(to top right, rgba(255, 255, 255, 0.116), rgba(219, 166, 67, 0.247), rgba(255, 255, 255, 0.034), transparent, transparent, rgba(84, 119, 143, 0.212), rgba(66, 118, 230, 0.384), transparent);
 }
 .dropbtn {
-    background-color: rgb(255, 94, 0);
+    background-image: linear-gradient(to top right, rgba(54, 52, 52, 0.452), rgba(71, 69, 64, 0.548), rgba(75, 71, 71, 0.295), rgba(84, 119, 143, 0.212), rgba(66, 118, 230, 0.384), transparent);
     color: #000;
     padding: 16px;
     font-size: 16px;
@@ -163,7 +179,7 @@ background: blue;
     width: 90px;
     margin-left: 5px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(253, 253, 253, 0.479);
+    box-shadow: 0 0 10px rgba(253, 253, 253, 0.144);
     outline: none;
   }
   
@@ -171,6 +187,7 @@ background: blue;
     position: relative;
     display: inline-block;
     margin-top: 10px;
+    color: orange;
   }
   
   .dropdown-content {
@@ -178,9 +195,9 @@ background: blue;
     position: absolute;
     right: 90px;
     top: 0;
-    background-color: #f1f1f198;
+    background-color: #49464667;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2),inset 0 0 10px #fff;
     z-index: 1;
     border-radius: 10px;
     max-height: 500px;
@@ -190,7 +207,7 @@ background: blue;
   }
   
   .dropdown-content a {
-    color: #000;
+    color: #fff;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -205,7 +222,7 @@ background: blue;
 }
   
   .dropdown-content a:hover {
-    background-color: orange;
+    background-color: rgb(106, 132, 218);
     border-top: solid 1px #000;
     border-bottom: solid 1px #000;
     box-shadow: inset 0 0 10px #000, 0 0 5px #222;
@@ -218,6 +235,94 @@ background: blue;
   .dropdown:hover .dropbtn {
     background-color: #f1f1f198;
     color: #000;
-    text-shadow: 0 0 4px orange;
+    text-shadow: 0 0 4px rgb(0, 162, 255);
     box-shadow: inset 0 0 5px rgba(253, 253, 253, 0.479);
 }
+/*BACKGROUND*/
+.title {
+    font-size: 10.5rem;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: rgba(201, 207, 209, 0.493);
+    z-index: -1000;
+    text-shadow: 0 0 6px rgba(0, 217, 255, 0.37);
+}
+.rear img {
+    position: fixed;
+    right: 42%;
+    top: 45%;
+    opacity: 0.4;
+    width: 450px;
+}
+/*==============================================API===============================================================*/
+#root {
+    margin: 0 auto;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(85, 80, 57, 0.185);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px white;
+  }
+  
+  .card {
+    margin: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(238, 184, 5, 0.575);
+    background-image: linear-gradient(to top right, rgba(255, 255, 255, 0.116), rgba(219, 166, 67, 0.247), rgba(255, 255, 255, 0.034), transparent, transparent, rgba(217, 224, 110, 0.212), rgba(230, 178, 66, 0.384), transparent);
+    border-right: solid 2px rgba(255, 166, 0, 0.699);
+    border-bottom: solid 3px rgba(255, 166, 0, 0.719);
+    text-shadow: 0 0 2px #000;
+    cursor: pointer;
+}
+.card:hover {
+    box-shadow: 0 0 20px white, inset 0 0 10px white;
+    border-right: solid 2px rgba(255, 255, 255, 0.781);
+    border-bottom: solid 3px rgba(255, 255, 255, 0.747);
+    background-image: linear-gradient(to top right, rgba(255, 255, 255, 0.116), rgba(177, 137, 64, 0.548), rgba(255, 255, 255, 0.068), transparent, rgba(255, 255, 255, 0.075), rgba(217, 224, 110, 0.212), rgba(230, 178, 66, 0.384), rgba(255, 255, 255, 0.349));
+    transition: all .7s ease-out;
+    transition-timing-function: ease-in-out;
+    text-shadow: 0 0 3px rgba(230, 166, 29, 0.699);
+    color: rgba(255, 255, 255, 0.507);
+}
+  @media screen and (min-width: 600px) {
+    .card {
+      flex: 1 1 calc(50% - 2rem);
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    .card {
+      flex: 1 1 calc(33% - 2rem);
+    }
+}
+  @media screen and (min-width: 1200px) {
+    .mid {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .nav ul li {
+        transform: translateX(-90%);
+        line-height: 42px;
+        transition: all .3s ease-out;
+    }
+    #root {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+    .card {
+      flex: 1 1 calc(20% - 2rem);
+    }
+    #root img {
+        width: 200px;
+    }
+  }
