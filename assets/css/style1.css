@@ -44,9 +44,7 @@ body {
     text-shadow: 0 0 3px #fff;
     padding: 20px;
 }
-.text-page p {
-    
-}
+
 .top {
     color: rgba(109, 178, 224, 0.699);
     width: 100%;
@@ -164,7 +162,7 @@ padding-top: 5px;
     height: 100vh;
     line-height: 38pt;
     box-shadow: 0 5px 20px -3px rgba(253, 253, 253, 0.479);
-    background: rgba(0, 0, 0, 0.733);
+    background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.301), rgba(110, 174, 190, 0.486), rgba(133, 153, 197, 0.308), rgba(163, 173, 196, 0.418), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
     color: rgb(52, 132, 236);
     transition: transform 300ms ease-out 70ms;
     font-size: 26pt;
@@ -172,10 +170,14 @@ padding-top: 5px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+.nav ul {
+    margin-top: 20px;
+}
 .nav::after {
     content: "Menu";
     position: absolute;
     right: -1%;
+    padding: 5px;
     text-align:  right;
     top: 50%;
     box-shadow: 3px 0 30px -3px lightskyblue;
@@ -191,7 +193,7 @@ padding-top: 5px;
     content: "Close";
 }
 .nav:hover {
-    transform: translate(-83%);
+    transform: translate(-73%);
 }
 .nav ul {
     list-style: none;
@@ -207,7 +209,7 @@ padding-top: 5px;
 }
 .nav ul li:hover {
     color: #fff;
-    text-shadow: 0 0 6px rgb(146, 187, 199);
+    text-shadow: 0 0 4px rgb(146, 187, 199);
     cursor: pointer;
     transition: transform 300ms ease-out 700ms;
 
