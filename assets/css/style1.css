@@ -48,15 +48,35 @@ body {
     
 }
 .top {
-    color: rgb(109, 178, 224);
+    color: rgba(109, 178, 224, 0.699);
     width: 100%;
+    opacity: .5;
+    text-shadow: 0 0 4px #fff;
 }
+.top h1 {
+    font-size: 100px;
+}
+.top h2 {
+    position: absolute;
+    margin-top: 8px;
+    width: 100%;
+    font-size: 40px;
+    color: #fff;
+    z-index: -998;
+}
+/* .top p {
+    position: absolute;
+    margin-top: -50px;
+    width: 100%;
+    font-size: 24px;
+    color: red;
+} */
 .logo {
     font-size: 2.5rem;
     text-align: center;
     width: 100%;
+    z-index: -900;
 }
-
 .main-nav {
     position: fixed;
     bottom: -50px;
@@ -69,12 +89,12 @@ body {
     background: lime;
 }
 .scroller {
-    background: rgb(207, 94, 1);
+    background: rgb(56, 82, 196);
     width: 180px;
     height: 180px;
     border-radius: 50%;
     padding: 8px;
-    border: solid 2px yellow;
+    border: solid 2px rgb(169, 205, 214);
     box-shadow: inset 0 0 10px white;
 }
 .control-buttons {
@@ -84,17 +104,58 @@ body {
     padding: 13px;
     border-radius: 50%;
     background: #000;
-    border: solid 2px black;
-    box-shadow: inset 0 0 10px orange;
+    border: solid 2px rgba(108, 118, 207, 0.623);
+    box-shadow: inset 0 0 10px rgb(149, 182, 192), 0 0 10px #fff;
 }
 .button-cluster-1 {
-transform: skew(15deg, 15deg);
 border-radius: 50%;
-background: blue;
+padding-top: 5px;
+
+}
+.button-cluster-1 button:first-of-type {
+   transform: rotateZ(340deg);
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+   background: blue;
+    color: #fff;
+    border: solid 1px #fff;
+    box-shadow: 0 0 10px #fff;
+}
+.button-cluster-1 button:last-of-type {
+   color: lime;
+   transform: rotateZ(20deg);
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+   background: blue;
+    color: #fff;
+    border: solid 1px #fff;
+    box-shadow: 0 0 10px #fff;
+    margin-left: 60px;
+    margin-top: 15px;
 }
 .button-cluster-1 button {
     transform: skew(25deg);
 
+}
+#confirm-btn {
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: blue;
+    color: #fff;
+    border: solid 1px #fff;
+    box-shadow: 0 0 10px #fff;
+    transform: rotateZ(2deg);
+    margin-top: -15px;
+}
+.button-cluster-2 button{
+    background: rgba(255, 255, 255, 0.493);
+    color: rgba(35, 70, 187, 0.904);
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 0 10px rgb(133, 133, 180), inset 0 0 5px #fff;
+    text-shadow: 0 0 3px #fff;
 }
 .nav {
     width: 100%;
@@ -107,6 +168,9 @@ background: blue;
     color: rgb(52, 132, 236);
     transition: transform 300ms ease-out 70ms;
     font-size: 26pt;
+    border: solid 1px #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .nav::after {
     content: "Menu";
@@ -114,13 +178,13 @@ background: blue;
     right: -1%;
     text-align:  right;
     top: 50%;
-    box-shadow: 3px 0 30px -3px orange;
+    box-shadow: 3px 0 30px -3px lightskyblue;
     z-index: 1000;
     transform: translateY(-50%);
     padding: 5px 5px 5px 0;
     border-radius: 7px;
     background: rgba(0, 0, 0, 0.486);
-    color: orange;
+    color: lightskyblue;
     transition: all .7s ease-out;
 }
 .nav:hover::after {
@@ -142,9 +206,12 @@ background: blue;
     margin-left: 35px;
 }
 .nav ul li:hover {
-    color: orange;
-    text-shadow: 0 0 6px rgb(226, 250, 120);
+    color: #fff;
+    text-shadow: 0 0 6px rgb(146, 187, 199);
     cursor: pointer;
+    transition: transform 300ms ease-out 700ms;
+
+
 }
 .nav ul li:active {
     color: white;
@@ -168,7 +235,7 @@ background: blue;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(253, 253, 253, 0.479), inset 0 0 5px rgba(253, 253, 253, 0.479);
-    background-image: linear-gradient(to top right, rgba(255, 255, 255, 0.116), rgba(219, 166, 67, 0.247), rgba(255, 255, 255, 0.034), transparent, transparent, rgba(84, 119, 143, 0.212), rgba(66, 118, 230, 0.384), transparent);
+    background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.11), rgba(110, 174, 190, 0.199), transparent, transparent, rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
 }
 .dropbtn {
     background-image: linear-gradient(to top right, rgba(54, 52, 52, 0.452), rgba(71, 69, 64, 0.548), rgba(75, 71, 71, 0.295), rgba(84, 119, 143, 0.212), rgba(66, 118, 230, 0.384), transparent);
@@ -177,6 +244,8 @@ background: blue;
     font-size: 16px;
     border: none;
     width: 90px;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 3px #fff;
     margin-left: 5px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(253, 253, 253, 0.144);
@@ -187,7 +256,7 @@ background: blue;
     position: relative;
     display: inline-block;
     margin-top: 10px;
-    color: orange;
+    color: lightskyblue;
   }
   
   .dropdown-content {
@@ -195,7 +264,7 @@ background: blue;
     position: absolute;
     right: 90px;
     top: 0;
-    background-color: #49464667;
+    background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.123), rgba(110, 174, 190, 0.247), rgba(133, 153, 197, 0.226), rgba(163, 173, 196, 0.274), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2),inset 0 0 10px #fff;
     z-index: 1;
@@ -211,6 +280,8 @@ background: blue;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #fff;
 }
 .dropdown-content a:first-of-type {
     border-top-left-radius: 10px;
@@ -222,10 +293,13 @@ background: blue;
 }
   
   .dropdown-content a:hover {
-    background-color: rgb(106, 132, 218);
-    border-top: solid 1px #000;
-    border-bottom: solid 1px #000;
-    box-shadow: inset 0 0 10px #000, 0 0 5px #222;
+    background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.301), rgba(110, 174, 190, 0.486), rgba(133, 153, 197, 0.308), rgba(163, 173, 196, 0.418), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    text-shadow: 0 0 2px lightskyblue;
+    box-shadow: inset 0 0 10px #fff, 0 0 5px #222;
+    transition: all .7s ease-out;
+
 }
   
   .dropdown:hover .dropdown-content {
@@ -265,7 +339,7 @@ background: blue;
   .container {
     display: flex;
     flex-wrap: wrap;
-    background: rgba(85, 80, 57, 0.185);
+    background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.11), rgba(110, 174, 190, 0.199), transparent, transparent, rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
     padding: 10px;
     border-radius: 15px;
     box-shadow: inset 0 0 10px white;
@@ -275,22 +349,24 @@ background: blue;
     margin: 1rem;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(238, 184, 5, 0.575);
-    background-image: linear-gradient(to top right, rgba(255, 255, 255, 0.116), rgba(219, 166, 67, 0.247), rgba(255, 255, 255, 0.034), transparent, transparent, rgba(217, 224, 110, 0.212), rgba(230, 178, 66, 0.384), transparent);
-    border-right: solid 2px rgba(255, 166, 0, 0.699);
-    border-bottom: solid 3px rgba(255, 166, 0, 0.719);
-    text-shadow: 0 0 2px #000;
+    box-shadow: 0 0 10px rgba(66, 87, 133, 0.575);
+    background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.11), rgba(110, 174, 190, 0.199), transparent, transparent, rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
+    border-right: solid 2px rgba(73, 134, 214, 0.699);
+    border-left: solid 1px  rgba(73, 134, 214, 0.459);
+    border-bottom: solid 3px rgba(73, 134, 214, 0.699);
+    text-shadow: 0 0 2px #fff;
     cursor: pointer;
 }
 .card:hover {
     box-shadow: 0 0 20px white, inset 0 0 10px white;
     border-right: solid 2px rgba(255, 255, 255, 0.781);
+    border-left: solid 1px  rgba(255, 255, 255, 0.781);
     border-bottom: solid 3px rgba(255, 255, 255, 0.747);
-    background-image: linear-gradient(to top right, rgba(255, 255, 255, 0.116), rgba(177, 137, 64, 0.548), rgba(255, 255, 255, 0.068), transparent, rgba(255, 255, 255, 0.075), rgba(217, 224, 110, 0.212), rgba(230, 178, 66, 0.384), rgba(255, 255, 255, 0.349));
+    background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.123), rgba(110, 174, 190, 0.247), rgba(133, 153, 197, 0.226), rgba(163, 173, 196, 0.274), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
+    text-shadow: 0 0 3px rgba(80, 120, 173, 0.699);
+    color: rgba(255, 255, 255, 0.507);
     transition: all .7s ease-out;
     transition-timing-function: ease-in-out;
-    text-shadow: 0 0 3px rgba(230, 166, 29, 0.699);
-    color: rgba(255, 255, 255, 0.507);
 }
   @media screen and (min-width: 600px) {
     .card {
