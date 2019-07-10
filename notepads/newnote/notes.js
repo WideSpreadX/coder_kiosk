@@ -3,6 +3,10 @@ const btnSave =
 let notes = "";
 init();
 
+ mysql> GRANT ALL ON *.* to root@'localhost' IDENTIFIED BY 'root'; 
+
+ mysql> FLUSH PRIVILEGES;
+
 function init() {
     let out = "";
     let noteArray =
@@ -50,6 +54,7 @@ function readNotes() {
 
 function displayNote(note) {
     let noteArray =
+    //NEED TO UPDATE FROM LOCAL STORAGE TO DATABASE
         JSON.parse(localStorage.getItem('noteData'));
 
     let out = "<h2>" + noteArray[note].title + "</h2>";
@@ -59,7 +64,7 @@ function displayNote(note) {
 
     document.getElementById('noteDisplay').innerHTML = out;
 
-    document.getElementById('btnDelete').onclcik = function () {
+    document.getElementById('btnDelete').onclick = function () {
         noteArrayt.splice(note, 1);
         localStorage.setItem('noteData', JSON.stringify(noteArray));
         init();

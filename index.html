@@ -5,158 +5,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Coder Kiosk</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style1.css">
-    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="rear">
-        <div class="background">
-            <div class="title"></div>
+    <div class="spacer">
+        <p>.</p>
+    </div>
+    <div class="container">
+        <div class="main">
+            <div class="current-info">
+                <h2>Current Info</h2>
+            </div>
+            <div class="main-editor">
+                <button class="btn">Run</button>
+                <div class="first" contenteditable spellcheck="false"></div>
+                <iframe class="second">
+                </iframe>
+            </div>
         </div>
     </div>
-    <div class="top">
-        <div class="logo">
-            <h2>Bootcamp Spot</h2>
-            <h1>Coders Kiosk</h1>
-        </div>
+    <div class="warehouse">
         <div class="nav">
-            <!-- THIS NAV BAR WILL BE A SLIDE OUT FROM SIDE NAVIGATIONAL BAR -->
-            <ul>
-                <li>Dashboard</li>
-                <li>Sessions</li>
-                <li>Coursework</li>
-                <li>Career Services</li>
-                <li>Grades</li>
-                <li>Attendance</li>
-                <li>Video Library</li>
-                <li>Contacts</li>
-                <li>Help</li>
-                <li>My Profile</li>
-                <li class="nav-spacer">Tools</li>
-                <li>myPod</li>
-                <li>Team Tools</li>
-                <li>Design</li>
-                <li>Code</li>
-                <li>Deploy</li>
-                <li>Remote Classroom</li>
-                <li>Learn</li>
-                <li>Reference</li>
-            </ul>
-        </div>
-    </div>
-    <div class="mid">
-        <div class="board-tools">
-            <div class="dropdown">
-                <button class="dropbtn">Tools</button>
-                <div class="dropdown-content">
-                    <a href="#">Notebook</a>
-                    <a href="#">Calculator</a>
-                    <a href="#">Image Crop</a>
-                    <a href="#">Video Crop</a>
-                </div>
+            <div class="solid-menu">
+                <!-- THIS NAV BAR WILL BE A SLIDE OUT FROM SIDE NAVIGATIONAL BAR -->
+                <ul>
+                    <li>Dashboard</li>
+                    <li>Sessions</li>
+                    <li>Coursework</li>
+                    <li>Career Services</li>
+                    <li>Grades</li>
+                    <li>Attendance</li>
+                    <li>Video Library</li>
+                    <li>Contacts</li>
+                    <li>Help</li>
+                    <li>My Profile</li>
+                    <li class="nav-spacer">Tools</li>
+                    <li>myPod</li>
+                    <li>Team Tools</li>
+                    <li>Design</li>
+                    <li>Code</li>
+                    <li>Deploy</li>
+                    <li>Remote Class</li>
+                    <li>Learn</li>
+                    <li>Reference</li>
+                </ul>
             </div>
-            <div class="dropdown">
-                <button class="dropbtn">Learn</button>
-                <div class="dropdown-content long">
-                    <a href="html.css">HTML</a>
-                    <a href="#">CSS</a>
-                    <a href="#">JavaScript</a>
-                    <a href="#">Node JS</a>
-                    <a href="#">Angular JS</a>
-                    <a href="#">React JS</a>
-                    <a href="#">mySQL</a>
-                    <a href="#">Mongo DB</a>
-                    <a href="#">Handlebars</a>
-                    <a href="#">AJAX</a>
-                    <a href="#">JSON</a>
-                    <a href="#">C++</a>
-                    <a href="#">C#</a>
-                    <a href="#">C</a>
-                    <a href="#">Objective-C</a>
-                    <a href="#">Python</a>
-                    <a href="#">Lisp</a>
-                    <a href="#">Ruby</a>
-                    <a href="#">Ruby On Rails</a>
-                    <a href="#">Java</a>
-                    <a href="#">Flutter</a>
-                    <a href="#">.NET</a>
-                    <a href="#">WebVR</a>
-                    <a href="#">A-Frame</a>
-                    <a href="#">Swift</a>
-                    <a href="#">jQuery</a>
-                    <a href="#">PHP</a>
-                    <a href="#">Kotlin</a>
-                    <a href="#">Other</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Chat</button>
-                <div class="dropdown-content">
-                    <a href="#">Messaging</a>
-                    <a href="#">Email</a>
-                    <a href="#">Phone</a>
-                    <a href="#">Video Chat</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Build</button>
-                <div class="dropdown-content">
-                    <a href="#">Plan</a>
-                    <a href="#">Collect</a>
-                    <a href="#">Create</a>
-                    <a href="#">Launch</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Fun</button>
-                <div class="dropdown-content">
-                    <a href="#">Flashcards</a>
-                    <a href="#">Challenges</a>
-                    <a href="#">Code Off</a>
-                    <a href="#">Events</a>
-                </div>
+            <div class="add-new">
+                <ul>
+                    <li><button id="write">+</button></li>
+                    <li><button>++</button></li>
+                    <li><button>Img</button></li>
+                    <li><button>Vid</button></li>
+                </ul>
             </div>
         </div>
-        <!-- THIS AREA WILL SHOW DYNAMIC DATA AS NEEDED -->
-        <div id="root"></div>
-        <img src="./assets/images/bootcamp-spot-before.PNG" alt="Bootcamp Spot Before">
-    </div>
-    <div class="bot">
-        <div class="main-nav">
-            <!--USE EASY NAVIGATION DESIGN ON BLUEPRINTS-->
-            <!--             <div class="cluster">
-                <div class="scroller">
-                    <div class="control-buttons">
-                        <div class="button-cluster-1">
-                            <button>Prev</button>
-                            <button id="confirm-btn">Okay</button>
-                            <button>Next</button>
-                        </div>
-                        <div class="button-cluster-2">
-                            <button>1</button>
-                            <button>2</button>
-                            <button>3</button>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <ul id="menu-nav">
-                <a href="#menu" class="menu-button icon-plus" title="Show Menu"><span
-                        class="fas fa-share-alt"></span></a>
-                <a href="#0" class="menu-button icon-minus" title="Hide Menu"><span class="fas fa-share-alt"></span></a>
-                <li class="menu-item"><a href="#menu"><span class="fab fa-facebook"></span></a></li>
-                <li class="menu-item"><a href="#menu"><span class="fab fa-twitter"></span></a></li>
-                <li class="menu-item"><a href="#menu"><span class="fab fa-snapchat"></span></a></li>
-            </ul>
+        <div class="notebook-slider">
+            <div class="notebook">
+                <h4>Notebook 1</h4>
+            </div>
+            <div class="notebook">
+                <h4>Notebook 2</h4>
+            </div>
+            <div class="notebook">
+                <h4>Notebook 3</h4>
+            </div>
+        </div>
+        <div class="note-slider">
+            <div class="noteDisplay">
 
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
+            <div class="note">
+                <h4>Note 1</h4>
+                <h6>Note 1 Description</h6>
+                <hr>
+                <p>Note 1 note data You enter the note information here here here and here and sign here initial here
+                    sign here sign here initial here here and here and thank you for transferring your life savings into
+                    my bank account</p>
+            </div>
         </div>
     </div>
-    <div class="overlay">
-        <!-- THIS WILL BE FOR IN SITE USER HELP -->
-    </div>
-    <script src="app.js"></script>
+    <script src="./assets/logic/code-editor.js"></script>
+    <script src="note.js"></script>
+    <script src="notes.js"></script>
 </body>
 
 </html>
