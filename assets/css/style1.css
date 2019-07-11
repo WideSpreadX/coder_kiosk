@@ -1,36 +1,37 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
+.HomePage {
+    background: #000;
+    color: #fff;
+    font-size: 40px;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: inset 0 0 40px white;
+}
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
 }
+
 body {
-/*     overflow: hidden;
- */    background: #000;
+    /*     overflow: hidden;
+ */
+    background: #000;
     color: #fff;
     width: 100vw;
     height: 100vh;
     box-shadow: inset 0 0 40px white;
 }
+
 .spacer {
     width: 20px;
     height: 100vh;
@@ -41,8 +42,9 @@ body {
     z-index: 1000;
     box-shadow: 0 0 15px #fff;
 }
+
 .warehouse {
-    width: 30%;
+    width: 25%;
     height: 100vh;
     background: black;
     position: fixed;
@@ -59,7 +61,7 @@ body {
     height: 80%;
     margin-top: 5%;
     line-height: 38pt;
-    box-shadow: 0 5px 20px -3px rgba(253, 253, 253, 0.479),inset 0 0 10px rgba(84, 173, 201, 0.829);
+    box-shadow: 0 5px 20px -3px rgba(253, 253, 253, 0.479), inset 0 0 10px rgba(84, 173, 201, 0.829);
     background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.301), rgba(110, 174, 190, 0.486), rgba(133, 153, 197, 0.308), rgba(163, 173, 196, 0.418), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
     color: rgba(62, 117, 189, 0.87);
     text-shadow: 0 0 2px white;
@@ -72,6 +74,7 @@ body {
     border-bottom-right-radius: 20px;
     z-index: 900;
 }
+
 .solid-menu {
     width: 95%;
     height: 90%;
@@ -82,12 +85,14 @@ body {
     opacity: 1;
     box-shadow: 0 0 10px #fff, inset 0 0 40px lightskyblue;
 }
+
 .nav ul {
     margin-top: 10px;
 }
+
 .nav::after {
     content: "Menu >>";
-    width: 100%;
+    width: 80%;
     transform: translateY(-100%);
     position: absolute;
     transition: all .7s ease-out;
@@ -102,6 +107,7 @@ body {
     background-image: linear-gradient(to top right, rgba(37, 41, 48, 0.116), rgba(40, 42, 48, 0.301), rgba(110, 174, 190, 0.486), rgba(133, 153, 197, 0.308), rgba(163, 173, 196, 0.418), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
     color: lightskyblue;
 }
+
 .nav:hover::after {
     content: "<<<  Close";
     margin-right: 50px;
@@ -112,64 +118,75 @@ body {
     background: black;
     cursor: none;
 }
+
 .nav:hover {
-    transform: translate(-83%);
+    transform: translate(-80%);
     box-shadow: 0 10px 40px #fff, inset 0 0 20px rgba(126, 156, 190, 0.856);
 }
+
 .nav ul {
     list-style: none;
     position: fixed;
     right: -1px;
     height: 100vh;
 }
+
 .nav ul li {
     transform: translateX(-90%);
-    line-height: 42px;
+    line-height: 100px;
     transition: all .3s ease-out;
 }
+
 .nav ul li:hover {
     color: #fff;
     text-shadow: 0 0 4px rgb(146, 187, 199);
     cursor: pointer;
     transition: transform 300ms ease-out 700ms;
 }
+
 .nav ul li:active {
     color: white;
 }
+
 .justified {
     display: flex;
     flex-direction: row;
     margin-left: 80px;
     justify-content: space-between;
 }
+
 ul .tool-menu {
     z-index: 200;
     position: absolute;
 }
+
 .nav-spacer {
     margin-top: 100px;
     color: #fff;
 }
+
 .add-new {
     position: absolute;
     right: 10px;
     top: 10%;
 }
-.add-new button {
-border-radius: 50%;
-width: 50px;
-height: 50px;
-margin-left: -20px;
-margin-top: 10px;
-cursor: pointer;
-background: rgba(255, 255, 255, 0.5);
-color: #fff;
-font-size: 30px;
 
-text-shadow: 0 0 2px #000;
-box-shadow: 0 0 10px #fff, inset 0 0 5px #fff;
+.add-new button {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: -20px;
+    margin-top: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 0 0 2px #000;
+    box-shadow: 0 0 10px #fff, inset 0 0 5px #fff;
 }
+
 /*=======================CONTAINER=======================================*/
+
 .container {
     position: fixed;
     width: 70vw;
@@ -177,9 +194,13 @@ box-shadow: 0 0 10px #fff, inset 0 0 5px #fff;
     z-index: 999;
     background: #222;
 }
+
 /*==========================MAIN====================================*/
+
 /*==========================CURRENT INFO====================================*/
+
 /*==========================NOTEBOOK SLIDER====================================*/
+
 .notebook-slider {
     width: 24vw;
     height: 60vh;
@@ -187,13 +208,15 @@ box-shadow: 0 0 10px #fff, inset 0 0 5px #fff;
     right: 0;
     top: 18%;
 }
+
 .notebook {
     border: solid 1px rgba(255, 255, 255, 0.699);
     box-shadow: 0 0 10px #fff, inset 0 0 20px rgba(255, 255, 255, 0.685);
     background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.301), rgba(110, 174, 190, 0.226), rgba(133, 153, 197, 0.308), rgba(163, 173, 196, 0.212), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
     padding: 8px;
     border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;    width: 90%;
+    border-bottom-left-radius: 8px;
+    width: 90%;
     height: 18vh;
     margin-top: 3vh;
     margin-left: 10%;
@@ -203,6 +226,7 @@ box-shadow: 0 0 10px #fff, inset 0 0 5px #fff;
     transition-timing-function: ease-in-out;
     cursor: pointer;
 }
+
 .notebook:hover {
     opacity: 1.0;
     margin-left: 0;
@@ -210,12 +234,14 @@ box-shadow: 0 0 10px #fff, inset 0 0 5px #fff;
     transition: all .7s ease-out;
     transition-timing-function: ease-in-out;
 }
+
 .notebook h4 {
     font-size: 30px;
-
-  line-height: 100%;
+    line-height: 100%;
 }
+
 /*==========================NOTE SLIDER====================================*/
+
 .note-slider {
     width: 15vw;
     height: 100vh;
@@ -225,6 +251,7 @@ box-shadow: 0 0 10px #fff, inset 0 0 5px #fff;
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
 .note {
     border: solid 1px white;
     box-shadow: 0 0 10px #fff, inset 0 0 20px rgba(255, 255, 255, 0.685);
@@ -239,110 +266,129 @@ box-shadow: 0 0 10px #fff, inset 0 0 5px #fff;
     transition: all .7s ease-in-out;
     transition-timing-function: ease-in-out;
 }
+
 .note:hover {
     background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.363), rgba(67, 100, 143, 0.349), rgba(133, 153, 197, 0.308), rgba(163, 173, 196, 0.336), rgba(70, 96, 153, 0.295), rgba(81, 98, 153, 0.384), transparent);
     box-shadow: 0 0 15px #fff, inset 0 0 30px rgba(255, 255, 255, 0.541);
     transition: all .7s ease-in-out;
     transition-timing-function: ease-in-out;
 }
+
 .note h4 {
     font-size: 22px;
     text-shadow: 0 0 2px #fff;
 }
+
 .note h6 {
     font-size: 18px;
 }
+
 /*======================CODE EDITOR========================================*/
+
 .btn {
-         right:0;
-         padding: 0.4rem;
-        width: 4rem;
-        background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.301), rgba(110, 174, 190, 0.226), rgba(133, 153, 197, 0.308), rgba(163, 173, 196, 0.212), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
-        color: #fff;
-        text-shadow: 0 0 3px lightskyblue;
-        text-orientation: sideways;
-        font-size: 1rem;
-        outline:none;
-        cursor:pointer;
-         height: 50vh;
-         border-radius: 15px;
-         transition: all .7s ease-out;
-         transition-timing-function: ease-in-out;
-      }
-      .btn:hover{
-         color:white;
-         background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.301), rgba(46, 78, 126, 0.377), rgba(75, 100, 155, 0.274), rgba(163, 173, 196, 0.575), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
-         box-shadow: inset 0 0 18px #fff, 0 0 10px #fff;
-         transition: all .7s ease-out;
-         transition-timing-function: ease-in-out;
-        }
-      
-      
-      
-      .main-editor {
-        background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.301), rgba(110, 174, 190, 0.226), rgba(133, 153, 197, 0.308), rgba(163, 173, 196, 0.212), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
-        display: flex;
-        width: 65%;
-        margin-left: 1%;
-        margin-top: 5%;
-        height: 70vh;
-        padding: 1rem;
-        box-shadow:0 2px 3px black;
-        position:fixed;
-         justify-content: center;
-          align-items: center;
-        border: 7px solid #36383f;
-        border-radius: 20px;
-        box-shadow: 0 0 20px #fff;
-      }
-      
-      .first {
-        background: #000;
-        width: 30%;
-        overflow-x: hidden;
-        overflow-y: auto;
-        white-space: pre;
-        box-shadow: 0 1px 1px rgb(22, 22, 22);
-        outline: none;
-        padding: 15px;
-        color: white;
-        font-family: 'Courier New', Courier, monospace;
-        height: 68vh;
-        font-size: 14px;
-        margin-left: 2%;
-        border-radius: 15px;
-        box-shadow: inset 0 0 10px #fff, 0 0 5px #fff;
-        transition: all .7s ease-out;
-        transition-timing-function: ease-in-out;
-        border-radius: 10px;
-        border: solid 1px white;
-        box-shadow: 0 0 10px white, inset 0 0 5px #000;
-      }
-      
-      .second {
-        background-color: rgb(255, 255, 255);
-        width: 45%;
-        overflow-y: auto;
-        white-space: pre;
-        right: 0;
-        box-shadow: 0 0 10px rgb(255, 255, 255), inset 0 0 10px black;
-        padding: 0.4rem;
-        height: 68vh;
-        margin-left: 5%;
-        border-radius: 10px;
-      }
+    right: 0;
+    padding: 0.4rem;
+    width: 4rem;
+    background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.301), rgba(110, 174, 190, 0.226), rgba(133, 153, 197, 0.308), rgba(163, 173, 196, 0.212), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
+    color: #fff;
+    text-shadow: 0 0 3px lightskyblue;
+    text-orientation: sideways;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    height: 50vh;
+    border-radius: 15px;
+    transition: all .7s ease-out;
+    transition-timing-function: ease-in-out;
+}
+
+.btn:hover {
+    color: white;
+    background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.301), rgba(46, 78, 126, 0.377), rgba(75, 100, 155, 0.274), rgba(163, 173, 196, 0.575), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
+    box-shadow: inset 0 0 18px #fff, 0 0 10px #fff;
+    transition: all .7s ease-out;
+    transition-timing-function: ease-in-out;
+}
+
+.main-editor {
+    background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.301), rgba(110, 174, 190, 0.226), rgba(133, 153, 197, 0.308), rgba(163, 173, 196, 0.212), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
+    display: flex;
+    width: 63%;
+    margin-left: 1%;
+    margin-top: 5%;
+    height: 80vh;
+    padding: 1rem;
+    box-shadow: 0 2px 3px black;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    border: 7px solid #36383f;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #fff;
+}
+
+.first {
+    background: #000;
+    width: 30%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: pre;
+    box-shadow: 0 1px 1px rgb(22, 22, 22);
+    outline: none;
+    padding: 15px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    height: 68vh;
+    font-size: 14px;
+    margin-left: 2%;
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px #fff, 0 0 5px #fff;
+    transition: all .7s ease-out;
+    transition-timing-function: ease-in-out;
+    border-radius: 10px;
+    border: solid 1px white;
+    box-shadow: 0 0 10px white, inset 0 0 5px #000;
+}
+
+.second {
+    background-color: rgb(255, 255, 255);
+    width: 45%;
+    overflow-y: auto;
+    white-space: pre;
+    right: 0;
+    box-shadow: 0 0 10px rgb(255, 255, 255), inset 0 0 10px black;
+    padding: 0.4rem;
+    height: 68vh;
+    margin-left: 5%;
+    border-radius: 10px;
+}
+
 /*==============================================================*/
+
 /*==============================================================*/
+
 /*==============================================================*/
+
 /*==============================================================*/
+
 /*==============================================================*/
+
 /*==============================================================*/
+
 /*==============================================================*/
+
 /*==============================================================*/
+
 /*==============================================================*/
+
 /*==============================================================*/
+
 /*==============================================================*/
+
 /*==============================================================*/
+
 /*==============================================================*/
+
 /*==============================================================*/
+
 /*==============================================================*/
