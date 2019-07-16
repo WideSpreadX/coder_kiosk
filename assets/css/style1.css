@@ -64,18 +64,18 @@ body {
 /*==========================MAIN MENU====================================*/
 
 .nav {
-    width: 85%;
+    width: 55%;
     transform: translate(-95%);
     position: fixed;
-    height: 80%;
+    height: 80vh;
     margin-top: 5%;
     line-height: 38pt;
     box-shadow: 0 5px 20px -3px rgba(253, 253, 253, 0.479), inset 0 0 10px rgba(84, 173, 201, 0.829);
     background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.301), rgba(110, 174, 190, 0.486), rgba(133, 153, 197, 0.308), rgba(163, 173, 196, 0.418), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
     color: rgba(62, 117, 189, 0.87);
     text-shadow: 0 0 2px white;
-    transition: transform 300ms ease-out 70ms;
-    font-size: 20pt;
+    transition: transform 300ms ease-out 150ms;
+    font-size: 16pt;
     border-right: solid 2px #fff;
     border-top: solid 1px #fff;
     border-bottom: solid 1px #fff;
@@ -94,15 +94,21 @@ body {
     opacity: 1;
     box-shadow: 0 0 10px #fff, inset 0 0 40px lightskyblue;
 }
-
+.solid-menu ul {
+    padding-right: 35px;
+}
+.solid-menu li {
+    padding: 0;
+    line-height: 28px;
+}
 .nav ul {
     margin-top: 10px;
 }
 
 .nav::after {
     content: "Menu >>";
-    width: 80%;
-    transform: translateY(-100%);
+    width: 60%;
+    transform: translateY(-50%);
     position: absolute;
     transition: all .7s ease-out;
     right: -1%;
@@ -129,7 +135,7 @@ body {
 }
 
 .nav:hover {
-    transform: translate(-80%);
+    transform: translateX(-80%);
     box-shadow: 0 10px 40px #fff, inset 0 0 20px rgba(126, 156, 190, 0.856);
 }
 
@@ -137,20 +143,20 @@ body {
     list-style: none;
     position: fixed;
     right: -1px;
-    height: 100vh;
+
 }
 
-.nav ul li {
+.nav li {
     transform: translateX(-90%);
-    line-height: 100px;
     transition: all .3s ease-out;
+    padding: 0;
 }
 
 .nav ul li:hover {
     color: #fff;
     text-shadow: 0 0 4px rgb(146, 187, 199);
     cursor: pointer;
-    transition: transform 300ms ease-out 700ms;
+    transition: transform 3000ms ease-out 7000ms;
 }
 
 .nav ul li:active {
@@ -176,22 +182,39 @@ ul .tool-menu {
 
 .add-new {
     position: absolute;
-    right: 10px;
-    top: 10%;
+    right: 80%;
+    top:90%;
 }
-
+.add-new ul {
+    padding-top: 30px;
+}
+.add-new li {
+    float: left;
+    width: 10%;
+    margin-left: 15%;
+    list-style: none;
+}
+.add-new li:last-child {
+    margin-left: 40px;
+}
 .add-new button {
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-left: -20px;
-    margin-top: 10px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.5);
     color: #fff;
     font-size: 30px;
     text-shadow: 0 0 2px #000;
     box-shadow: 0 0 10px #fff, inset 0 0 5px #fff;
+    transition: all .7s ease-out;
+    transition-timing-function: ease-in-out;
+}
+.add-new button:hover {
+    background: rgba(26, 134, 167, 0.801);
+    box-shadow: inset 0 0 5px #fff;
+    transition: all .7s ease-out;
+    transition-timing-function: ease-in-out;
 }
 
 /*=======================CONTAINER=======================================*/
@@ -238,15 +261,26 @@ ul .tool-menu {
 
 .notebook:hover {
     opacity: 1.0;
-    margin-left: 0;
+    margin-left: 30px;
     border-radius: 8px;
     transition: all .7s ease-out;
     transition-timing-function: ease-in-out;
+    z-index: 950;
 }
 
 .notebook h4 {
     font-size: 30px;
     line-height: 100%;
+}
+#notebookNumber {
+    font-size: 84px;
+    background: rgba(255, 255, 255, 0.432);
+    color: lightskyblue;
+    margin: 20px;
+    padding-left: 30px;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+
 }
 
 /*==========================NOTE SLIDER====================================*/
@@ -257,8 +291,55 @@ ul .tool-menu {
     position: absolute;
     top: 0;
     right: 0;
+    padding-top: 220px;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+.new-note {
+    background: rgba(65, 144, 189, 0.726);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding:8px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 14vw;
+    margin-right: 17px;
+    box-shadow: 0 0 10px #fff;
+}
+.new-note h6 textarea {
+    background: rgba(141, 157, 170, 0.432);
+    box-shadow: inset 0 0 10px #fff, 0 0 5px #222;
+    color: #fff;
+    width: 90%;
+    margin-left: 5%;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bolder;
+    padding-left: 10px;
+    line-height: 30px;
+    border: none;
+    border-radius: 5px;
+}
+.new-note h6 textarea::placeholder {
+    color: #fff;
+}
+.new-note p textarea::placeholder {
+    color: #fff;
+    font-size: 32px;
+    font-weight: bolder;
+}
+.new-note p textarea {
+    background: blue;
+    width: 90%;
+    margin-left: 5%;
+    height: 150px;
+    background: rgba(54, 88, 104, 0.432);
+    box-shadow: inset 0 0 10px #fff, 0 0 5px #222;
+    color: #fff;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 .note {
@@ -291,7 +372,10 @@ ul .tool-menu {
 .note h6 {
     font-size: 18px;
 }
-
+#note {
+    height: 100vh;
+    width: 100%;
+}
 /*======================CODE EDITOR========================================*/
 
 .btn {
@@ -372,12 +456,104 @@ ul .tool-menu {
     border-radius: 10px;
 }
 
-/*==============================================================*/
+/*================================INDEX.HTML==============================*/
+.HomePage {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.HomePage h1{
+    text-align: center;
+    margin-top: 5%;
+    font-size: 100px;
+}
+.log-sign {
+    width: 100%;
+    margin-left: 25%;
+}
+.log-sign a {
+    float: left;
+    width: 25%;
+}
+.log-sign button {
+    width: 80%;
+    height: 100px;
+    margin-top: 50%;
+    margin-left: 10%;
+}
+/*==============================LOGIN.HTML================================*/
+.top h1 {
+    font-size: 100px;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.login-form {
+    width: 50%;
+    margin-left: 25%;
+}
+.form-group {
+    width: 30%;
+    height: 80px;
+    border-radius: 10px;
+    margin-left: 35%;
+    margin-top: 10px;
+    background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.301), rgba(110, 174, 190, 0.226), rgba(133, 153, 197, 0.308), rgba(163, 173, 196, 0.212), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.253);
+    border: solid 1px white;
+    box-shadow: 0 0 20px #fff;
+}
+.form-group label {
+    width: 100%;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    box-shadow: 0 0 20px #000;
+    background: rgba(135, 206, 250, 0.863);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.form-group input {
+    width: 80%;
+    box-shadow: inset 0 0 20px #000;
+    display: block;
+    margin-top: 15px;
+    margin-left: 10%;
+    padding-left: 3px;
+    border-radius: 5px;
+    background: white;
+    color: black;
+}
+.form-group input::placeholder {
+    color: lightskyblue;
+}
+.btn-primary {
+    width: 50%;
+    margin-left: 25%;
+    height: 50px;
+    margin-top: 100px;
+    transition: none;
+    background-image: linear-gradient(to top right, rgba(66, 99, 143, 0.116), rgba(55, 87, 145, 0.301), rgba(110, 174, 190, 0.226), rgba(133, 153, 197, 0.308), rgba(163, 173, 196, 0.212), rgba(70, 96, 153, 0.212), rgba(81, 98, 153, 0.384), transparent);
 
-/*==============================================================*/
+}
 
-/*==============================================================*/
-
+/*===============================SIGN UP===============================*/
+.sign-up {
+    width: 50%;
+    margin-left: 25%;
+    padding-top: 8%;
+    overflow: hidden;
+}
+.logo h1 {
+    position: fixed;
+    font-size: 200px;
+    color: #fff;
+    text-shadow: 0 0 8px lightskyblue;
+    top: 35%;
+    left: 22%;
+    z-index: -998;
+}
 /*==============================================================*/
 
 /*==============================================================*/

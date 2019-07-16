@@ -147,4 +147,85 @@ CREATE TABLE users
 
 
                                     SELECT *
-                                    FROM users;
+                                    FROM users
+/*
+----------------------------------------------------------
+*/
+DROP DATABASE IF EXISTS coder_kiosk_db;
+CREATE DATABASE coder_kiosk_db;
+
+USE coder_kiosk_db;
+
+CREATE TABLE users (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    f_name VARCHAR(100) NOT NULL,
+    l_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    passphrase VARCHAR(255) NOT NULL,
+    age INT(3) NOT NULL,
+    sex VARCHAR(1) NOT NULL
+);
+
+
+
+CREATE TABLE notes
+(
+   note_id INT NOT NULL auto_increment PRIMARY KEY,
+   sub VARCHAR(225) NOT NULL,
+   title VARCHAR(500) NOT NULL,
+   body VARCHAR(500) NOT NULL,
+   tags VARCHAR(225) NOT NULL,
+   image VARCHAR(225) NOT NULL
+
+);
+
+
+
+CREATE TABLE activities(
+    activity_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    week VARCHAR(50),
+    activity_name VARCHAR(100) NOT NULL,
+    activity_description VARCHAR(255) NOT NULL,
+    activity_data VARCHAR(500) NOT NULL
+);
+CREATE TABLE homework(
+    homework_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    homework_name VARCHAR(100) NOT NULL,
+    homework_description VARCHAR(255) NOT NULL,
+    homework_data VARCHAR(500) NOT NULL
+);
+CREATE TABLE projects(
+    project_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    project_name VARCHAR(100) NOT NULL,
+    project_description VARCHAR(255) NOT NULL,
+    project_data VARCHAR(500) NOT NULL
+);
+
+INSERT INTO notes(sub, title, body, tags, image)  VALUES ("HTML","What is HTML?","HTML is a webpage","HTML","blahblahblah");
+INSERT INTO notes(sub, title, body, tags, image)  VALUES ("HTML","What is HTML?","HTML is a webpage","HTML","blahblahblah");
+INSERT INTO notes(sub, title, body, tags, image)  VALUES ("HTML","What is HTML?","HTML is a webpage","HTML","blahblahblah");
+INSERT INTO notes(sub, title, body, tags, image)  VALUES ("HTML","What is HTML?","HTML is a webpage","HTML","blahblahblah");
+INSERT INTO notes(sub, title, body, tags, image)  VALUES ("HTML","What is HTML?","HTML is a webpage","HTML","blahblahblah");
+INSERT INTO notes(sub, title, body, tags, image)  VALUES ("HTML","What is HTML?","HTML is a webpage","HTML","blahblahblah");
+INSERT INTO notes(sub, title, body, tags, image)  VALUES ("HTML","What is HTML?","HTML is a webpage","HTML","blahblahblah");
+
+INSERT INTO users(f_name, l_name, email, passphrase, age, sex) VALUES ("Jonathan","Olson","widespread.main@gmail.com","DontBeSoMean$#@!","32","M");
+INSERT INTO users(f_name, l_name, email, passphrase, age, sex) VALUES ("Mike","Corey","corey@gmail.com","coreyMIKE3245","30","M");
+INSERT INTO users(f_name, l_name, email, passphrase, age, sex) VALUES ("Stephanie","Nolan","steph@gmail.com","ItsStephyYall!@#$%^","35","F");
+INSERT INTO users(f_name, l_name, email, passphrase, age, sex) VALUES ("Mark","Techson","nunya@mail.com","root","38","M");
+INSERT INTO users(f_name, l_name, email, passphrase, age, sex) VALUES ("Roxy","Milea","roxy@gmail.com","ShesAJudge!?","28","F");
+INSERT INTO users(f_name, l_name, email, passphrase, age, sex) VALUES ("Daniel","Santos","sonosman@yahoo.com","CPlus+IsEasy","30","M");
+INSERT INTO users(f_name, l_name, email, passphrase, age, sex) VALUES ("Dee","FG","DeeFG@outlook.com","password","28","F");
+
+
+
+INSERT INTO activities(week, activity_name, activity_description, activity_data) VALUES ("1","HTML Introduction","Learn the Very Basics of HTML","This will be the lesson for learning the very basics of HTML");
+
+INSERT INTO homework(homework_name, homework_description, homework_data) VALUES ("Portfolio","Build your Portfolio","Build a working portfolio website for all of your future assignments");
+
+INSERT INTO projects(project_name, project_description, project_data) VALUES ("CoCo","An app to help understand","Webpage to be displayed");
+
+
+
+
+SELECT * FROM users JOIN notes JOIN activities JOIN homework JOIN projects;

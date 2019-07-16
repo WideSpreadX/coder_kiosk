@@ -3,6 +3,13 @@ const btnSave =
 let notes = "";
 init();
 
+<<<<<<< Updated upstream
+=======
+/*  mysql> GRANT ALL ON *.* to root@'localhost' IDENTIFIED BY 'root'; 
+
+ mysql> FLUSH PRIVILEGES; */
+
+>>>>>>> Stashed changes
 function init() {
     let out = "";
     let noteArray =
@@ -55,7 +62,7 @@ function displayNote(note) {
     let out = "<h2>" + noteArray[note].title + "</h2>";
     out += "<h4>Date:" + new Date(noteArray[note].date).toDateString() + "</h4>";
     out += "<p>" + noteArray[note].body + "</p>";
-    out += "<button id='btnDelete'>Delete</button> "
+    out += "<button id='btnDelete'>Delete</button> ";
 
     document.getElementById('noteDisplay').innerHTML = out;
 
