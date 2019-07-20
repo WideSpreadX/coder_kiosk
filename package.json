@@ -7,6 +7,7 @@
     "bootstrap": "^4.1.3",
     "jquery": "^3.3.1",
     "modernizr": "^3.6.0",
+    "node": "^12.6.0",
     "popper.js": "^1.14.6"
   },
   "devDependencies": {
@@ -67,5 +68,23 @@
         "single"
       ]
     }
-  }
+  },
+  "name": "coder-boot",
+  "description": "An online learning environment",
+  "version": "1.0.0",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WideSpreadX/coder_kiosk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WideSpreadX/coder_kiosk/issues"
+  },
+  "homepage": "https://github.com/WideSpreadX/coder_kiosk#readme"
 }
